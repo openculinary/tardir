@@ -10,6 +10,7 @@ classifiers=[
     "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)"
 ]
 dependencies = [
+    "surt >= 0.3.1"
 ]
 description = ""
 license = { text = "AGPL-3.0-or-later" }
