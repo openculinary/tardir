@@ -10,6 +10,7 @@ classifiers=[
     "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)"
 ]
 dependencies = [
+    "recipe_scrapers >= 14.23.0",
     "surt >= 0.3.1"
 ]
 description = ""
