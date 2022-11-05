@@ -21,5 +21,8 @@ requires-python = ">= 3.10"
 urls = { Homepage = "https://pypi.org/project/tardir/", Source = "https://github.com/openculinary/tardir.git/" }
 version = "0.0.1"
 
+[project.scripts]
+tardir-urls = "tardir.cli:urls"
+
 [tool.setuptools]
 packages = ["tardir"]
