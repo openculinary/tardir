@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [
+    {name = "James Addison", email = "james@reciperadar.com"},
+]
+classifiers=[
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)"
+]
+dependencies = [
+]
+description = ""
+license = { text = "AGPL-3.0-or-later" }
+name = "tardir"
+readme = { content-type = "text/markdown", file = "README.md" }
+requires-python = ">= 3.10"
+urls = { Homepage = "https://pypi.org/project/tardir/", Source = "https://github.com/openculinary/tardir.git/" }
+version = "0.0.1"
+
+[tool.setuptools]
+packages = ["tardir"]
