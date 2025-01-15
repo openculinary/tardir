@@ -36,7 +36,7 @@ def _may_be_usage_terms_and_conditions(url):
         return True
     if "guideline" in url.lower():
         return True
-    if url.count("usage") - url.count("sausage") > 0:
+    if url.lower().count("usage") - url.lower().count("sausage") > 0:
         return True
     return False
 
