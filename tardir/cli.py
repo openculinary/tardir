@@ -12,7 +12,7 @@ def _recipe_hosts():
 
 def urls():
     parser = ArgumentParser(description="Yield potential recipe URLs from a CDX index")
-    parser.add_argument("--filename", nargs=1, default=sys.stdin, type=FileType("r"))
+    parser.add_argument("--filename", default=sys.stdin, type=FileType("r"), required=True)
     args = parser.parse_args()
 
     surted_domains = set(surt.surt(f"http://{host}")[:-2] for host in _recipe_hosts())
@@ -26,4 +26,26 @@ def urls():
         if not "text/html" == crawl_info["mime"] == crawl_info["mime-detected"]:
             continue
 
-        print(crawl_info["url"])
+        yield crawl_info
+
+
+def _may_be_usage_terms_and_conditions(url):
+    if "terms" in url.lower():
+        return True
+    if "policy" in url.lower():
+        return True
+    if "guideline" in url.lower():
+        return True
+    if url.count("usage") - url.count("sausage") > 0:
+        return True
+    return False
+
+
+def possible_usage_terms_and_conditions():
+    for crawl_info in urls():
+        url = crawl_info["url"]
+        if _may_be_usage_terms_and_conditions(url):
+            print(url)
+
+
+possible_usage_terms_and_conditions()
