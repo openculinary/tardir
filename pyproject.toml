@@ -18,7 +18,7 @@ license = { text = "AGPL-3.0-or-later" }
 name = "tardir"
 readme = { content-type = "text/markdown", file = "README.md" }
 requires-python = ">= 3.10"
-urls = { Homepage = "https://pypi.org/project/tardir/", Source = "https://github.com/openculinary/tardir.git/" }
+urls = { Homepage = "https://pypi.org/project/tardir/", Source = "https://codeberg.org/openculinary/tardir.git/" }
 version = "0.0.1"
 
 [project.scripts]
